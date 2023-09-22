@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/LOGIN.css' %}">
+  </head>
+
+<header>
+    <H1 class="h1"> Login </H1>
+</header>
+
+<body>
+    <form action="{% url 'login' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.username.label_tag }} {{ form.username }}
+        <br>
+        {{ form.password.label_tag }} {{ form.password }}
+        <br>
+        <button class="button">INGRESAR</button>
+    </form>
+</body>
+
+</html>
