@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,13 @@
     <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ADMIN.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/ADMIN.css')}}">
 </head>
 <body>
     <header>
         <h1>Menu Administrador</h1>
-        <a href="{{ url_for('loginMenus.logout') }}"><button class="cerrar" >Cerrar Session</button></a>
+        <a href=""><button class="cerrar" >Cerrar Session</button></a>
     </header>
 
 
@@ -22,8 +23,8 @@
 <div class="menu">
 
    <div class="btn-group" role="group" aria-label="Basic outlined example">
-   <a href="{{ url_for('registroValoracion.registroval') }}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
-   <a href="{{ url_for('registroValoracion.listarvaloracion') }}"> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
+   <a href=""> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
+   <a href=""> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
     <button type="button" class="btn btn-outline-primary">Garantias</button>
   </div>
 </div>
