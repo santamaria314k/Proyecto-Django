@@ -15,7 +15,9 @@
 
 <body>
     <form action="{% url 'login' %}" method="POST" enctype="multipart/form-data">
+
         {% csrf_token %}
+        
         {{ form.username.label_tag }} {{ form.username }}
         {{ form.password.label_tag }} {{ form.password }}
         <button class="button">INGRESAR</button>

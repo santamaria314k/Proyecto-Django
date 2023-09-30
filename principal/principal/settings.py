@@ -38,9 +38,21 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', 
+    'crispy_forms',
     'Login',
+    'Valoracion',
 ]
+
+
+#AÑADIDOS A LA APP
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+AUTH_USER_MODEL = 'Login.Usuario'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -90,7 +102,6 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'Login.Usuario'
 
 
 

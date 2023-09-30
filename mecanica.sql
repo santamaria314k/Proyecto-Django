@@ -121,14 +121,9 @@ VALUES(1,'adminitrador','1')  ,
 
 select* from login_usuarios;
 
-INSERT INTO login_usuario (id_user,nombre, apellido, telefono, telefono2, email, direccion, genero, username, password, id_rol_id)
-VALUES(1,'kevin','sanabria','30057457','54545175','kevinsantamaria625@gmail.com','cll78c#87-90','Masculino','kevin','1234','1')  ,
-    (2,'Javier', 'García', '3012345678', '3123456789', 'javier.garcia@email.com', 'Calle 123 #45-67', 'Masculino', 'user', 'pass', '2');
-    
-    
-    
-    
-    
+INSERT INTO login_usuario (nombre, apellido, telefono, telefono2, email, direccion, genero, username, password, id_rol_id)
+VALUES('kevin','sanabria','30057457','54545175','kevinsantamaria625@gmail.com','cll78c#87-90','Masculino','kevin','1234','1')  ,
+    ('Javier', 'García', '3012345678', '3123456789', 'javier.garcia@email.com', 'Calle 123 #45-67', 'Masculino', 'user', 'pass', '2'),
     ('María', 'López', '3011111111', '3122222222', 'maria.lopez@email.com', 'Avenida 456 #78-90', 'Femenino', 'marial', 'contraseña456', '2'),
     ('Carlos', 'Martínez', '3023456789', '3145678901', 'carlos.martinez@email.com', 'Carrera 789 #12-34', 'Masculino', 'carlosm', 'clave789', '2'),
     ('Ana', 'Ramírez', '3012345678', '3123456789', 'ana.ramirez@email.com', 'Avenida 567 #89-01', 'Femenino', 'anar', 'secreta123', '2'),
