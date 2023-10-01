@@ -13,7 +13,9 @@
 <body>
     <header>
         <h1>Menu Administrador</h1>
-        <a href=""><button class="cerrar" >Cerrar Session</button></a>
+
+        <a href="{% url 'cerrar' %}"><button class="cerrar" >Cerrar Session</button></a>
+
     </header>
 
 
@@ -24,7 +26,7 @@
 
    <div class="btn-group" role="group" aria-label="Basic outlined example">
    <a href="{% url 'Valoracion:registrarvaloracion' %}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
-   <a href=""> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
+   <a href="{% url  'Valoracion:listarvaloracion'%}"> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
     <button type="button" class="btn btn-outline-primary">Garantias</button>
   </div>
 </div>

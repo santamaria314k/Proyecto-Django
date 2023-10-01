@@ -12,13 +12,14 @@
 </head>
 <body>
     <header>
-       <a href=""><button class="cerrar" >Cerrar Session</button></a> 
+        <a href="{% url 'cerrar' %}"><button class="cerrar" >Cerrar Session</button></a>
 
 
 <h1>Valoraciones</h1>
 
     </header>
-    <a href=""><button class="menuad" >Menu</button></a> 
+
+    <a href="/HomeLoc/admin"><button class="menuad">Menu</button></a>
 
 
 
@@ -34,11 +35,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for valoracion in valoraciones %}
+            {% for listadoDiagnostico in listadoDiagnosticos %}
             <tr>
          
               
-                <td> {{ valoracion.id_val }}  <p> .</p>  {{ valoracion.diagnostico }} <br><br> </td>
+                <td> {{ listadoDiagnostico.id_val }}  <p> .</p>  {{ listadoDiagnostico.diagnostico }} <br><a href="">ACTUALIZAR</a>-<a href="">ELIMINAR</a> </td>
                 
 
                 

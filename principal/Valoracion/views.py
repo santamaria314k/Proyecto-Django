@@ -26,4 +26,5 @@ def Guardar_Valoracion(request):
 
 #MOSTRAR LOSDIAGNOSTICOS_____________________________________________
 def ListarValoracion(request):
-    return render ( request,'listar_valoracion.html')
+    listadoDiagnosticos=Diagnostico.objects.all()
+    return render ( request,'listar_valoracion.html',{'listadoDiagnosticos':listadoDiagnosticos})
