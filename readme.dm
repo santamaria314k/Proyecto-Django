@@ -1,4 +1,4 @@
-
+proyecto mecanica
 
 1
 .\venv\Scripts\activate  
