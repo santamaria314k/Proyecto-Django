@@ -8,7 +8,7 @@ from django.contrib.auth import logout
 #--------------------------------------------
 
 
-#>>>>>>>>>>>>>>>>>>>>>>--PROTECCION--<<<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>>--PROTECCION-RUTAS--<<<<<<<<<<<<<<<<<<<<<<
 
 from functools import wraps
 from django.contrib import messages
@@ -72,6 +72,29 @@ def user(request):
     else:
         messages.error(request, 'No tienes permiso para acceder a esta página.')
         return redirect('login')
+    
+    
+    #>>>>>>>>>>>>>>>>>>>>>>--Employee--<<<<<<<<<<<<<<<<<<<<<<
+
+    
+def employee(request):
+    if not request.session.get('username') or not request.session.get('password'):
+        return redirect('login')
+
+    username = request.session.get('username')
+    password = request.session.get('password')
+
+    
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT id_rol_id FROM login_usuario WHERE username = %s AND password = %s", [username, password])
+        row = cursor.fetchone()
+
+    if row and row[0] == 3:
+        return render(request, 'Employee.html')
+    else:
+        messages.error(request, 'No tienes permiso para acceder a la pagina.')
+        return redirect('login')
+
 
 #>>>>>>>>>>>>>>>>>>>>>>--LOGIN--<<<<<<<<<<<<<<<<<<<<<<
 def login_view(request):
@@ -94,10 +117,12 @@ def login_view(request):
                     return redirect('admin')
                 elif id_rol_id == 2:
                     return redirect('user')
+                elif id_rol_id == 3:
+                    return redirect('employee')
             else:
                 messages.error(request, 'Usuario o contraseña incorrectos.')
         else:
-            messages.error(request, 'Por favor, ingresa credenciales válidas.')
+            messages.error(request, ' ingresar  credenciales válidas.')
     else:
         form = LoginForm()
     
