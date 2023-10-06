@@ -17,19 +17,40 @@
         <a href="{% url 'cerrar' %}"><button class="cerrar" >Cerrar Session</button></a>
 
     </header>
-
-
+   
    
 
 
 <div class="menu">
 
-   <div class="btn-group" role="group" aria-label="Basic outlined example">
-   <a href="{% url 'Valoracion:registrarvaloracion' %}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
-   <a href="{% url  'Valoracion:listarvaloracion'%}"> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
-    <button type="button" class="btn btn-outline-primary">Garantias</button>
+  <div class="dropdown">
+    <button class="btn btn-outline-primary dropdown-toggle  " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Valoracion
+    </button>
+    <ul class="dropdown-menu">
+      <li>  <a href="{% url 'Valoracion:registrarvaloracion' %}"> <button class="dropdown-item" type="button">Registrar</button></a></li>
+      <li> <a href="{% url  'Valoracion:listarvaloracion'%}"><button class="dropdown-item" type="button">Listar</button></a> </li>
+    </ul>
   </div>
+
+
+
+  <div class="dropdown">
+    <button class="btn btn-outline-primary dropdown-toggle  " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Garantias
+    </button>
+    <ul class="dropdown-menu">
+      <li> <a href="#"> <button class="dropdown-item" type="button">Registrar</button></a></li>
+      <li> <a href="#"><button class="dropdown-item" type="button">Listar</button></a></li>
+    </ul>
+  </div>
+
+
 </div>
+
+
+
+
 <footer>
     <h1>Mecanica-Master </h1>
   <br> 

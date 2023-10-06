@@ -113,18 +113,20 @@ ALTER TABLE `Garantias` ADD CONSTRAINT `Garantias_fk1` FOREIGN KEY (`id_tiga`) R
 
 
 #-----------------------------------------------------------------------------------------------------------------------------------
-
+#inserciones de datos en django :)
 
 INSERT INTO login_rol (id,nombre, estado)
 VALUES(1,'adminitrador','1')  ,
-   (2,'usuario','0') ;
+	  (2,'usuario','1') ,
+	  (3,'employee','1') ;
 
 select* from login_usuarios;
 
 INSERT INTO login_usuario (nombre, apellido, telefono, telefono2, email, direccion, genero, username, password, id_rol_id)
 VALUES('kevin','sanabria','30057457','54545175','kevinsantamaria625@gmail.com','cll78c#87-90','Masculino','kevin','1234','1')  ,
     ('Javier', 'García', '3012345678', '3123456789', 'javier.garcia@email.com', 'Calle 123 #45-67', 'Masculino', 'user', 'pass', '2'),
-    ('María', 'López', '3011111111', '3122222222', 'maria.lopez@email.com', 'Avenida 456 #78-90', 'Femenino', 'marial', 'contraseña456', '2'),
+    ('María', 'López', '3011111111', '3122222222', 'maria.lopez@email.com', 'Avenida 456 #78-90', 'Femenino', 'trabajador', 'contraseña', '3'),
+    
     ('Carlos', 'Martínez', '3023456789', '3145678901', 'carlos.martinez@email.com', 'Carrera 789 #12-34', 'Masculino', 'carlosm', 'clave789', '2'),
     ('Ana', 'Ramírez', '3012345678', '3123456789', 'ana.ramirez@email.com', 'Avenida 567 #89-01', 'Femenino', 'anar', 'secreta123', '2'),
     ('Alejandro', 'Gómez', '3012345678', '3123456789', 'alejandro.gomez@email.com', 'Calle 890 #23-45', 'Masculino', 'alejandrog', 'password123', '1'),

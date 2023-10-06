@@ -1,4 +1,12 @@
 {% load static %}
+<!-- alert  para eliminar -->
+{%block javascript %}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script src="{%  static 'js/eliminacion.js' %}"></script>
+
+{% endblock %}
+
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,7 +26,8 @@
 <h1>Valoraciones</h1>
 
     </header>
-    
+    <a href="{% url 'Valoracion:registrarvaloracion' %}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
+
     <a href="/HomeLoc/admin"><button class="menuad">Menu</button></a>
 
 
@@ -31,6 +40,7 @@
         <thead>
             <tr>
                 <th>Valoraciones</th>
+
                 
 
             </tr>
@@ -38,18 +48,16 @@
         <tbody>
             {% for listadoDiagnostico in listadoDiagnosticos %}
             <tr>
-         
-              
-                <td> {{ listadoDiagnostico.id_val }}  <p> .</p>  {{ listadoDiagnostico.diagnostico }} <br><a href="">ACTUALIZAR</a>-<a href="">ELIMINAR</a> </td>
+                <td class="textolargo"> {{ listadoDiagnostico.id_val }}  <p> __</p>  {{ listadoDiagnostico.diagnostico }}</td>
+                <td><a href="{% url 'Valoracion:editarvaloracion' listadoDiagnostico.id_val %}">ACTUALIZAR</a>-<a href="#" onclick="eliminar({{listadoDiagnostico.id_val }})"> ELIMINAR</a> <br><br></td>
                 
-
-                
-
             </tr>
             {% endfor %}
         </tbody>
+
     </table>
 {% endblock %}
+
 
 
 

@@ -86,3 +86,14 @@ td{
   border: 2px solid rgb(132, 226, 226);
   border-radius: 6px;
 }
+
+td {
+  position: relative;
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  white-space: pre-wrap; 
+}
+.textolargo {
+  white-space: pre-line; 
+  font-size: 25px;}

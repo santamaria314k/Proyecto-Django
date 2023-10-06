@@ -6,4 +6,4 @@ class ValoracionForm(forms.ModelForm):
         model = Diagnostico  
         fields = ['diagnostico']  
 
-    diagnostico = forms.CharField(label='Diagnóstico del vehículo')  # Agrega el campo adicional si es necesario
+    diagnostico = forms.CharField(label='Diagnóstico del vehículo') 

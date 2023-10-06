@@ -65,3 +65,4 @@ class Rol(models.Model):
         return self.nombre
 
 
+                

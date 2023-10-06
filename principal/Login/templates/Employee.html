@@ -22,14 +22,27 @@
    
 
 
-<div class="menu">
 
-   <div class="btn-group" role="group" aria-label="Basic outlined example">
-   <a href="{% url 'Valoracion:registrarvaloracionemplo' %}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
-   <a href="{% url  'Valoracion:listarvaloracionemplo'%}"> <button  type="button" class="btn btn-outline-primary">Listado valoracion</button></a>
-    <button type="button" class="btn btn-outline-primary">Garantias</button>
-  </div>
-</div>
+    <div class="menu">
+
+      <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle  " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Valoracion
+        </button>
+        <ul class="dropdown-menu">
+          <li>  <a href="{% url 'Valoracion:registrarvaloracionemplo' %}"> <button class="dropdown-item" type="button">Registrar</button></a></li>
+          <li> <a href="{% url  'Valoracion:listarvaloracionemplo'%}"><button class="dropdown-item" type="button">Listar</button></a> </li>
+        </ul>
+      </div>
+    
+    
+    
+      </div>
+    
+    
+    
+
+
 <footer>
     <h1>Mecanica-Master </h1>
   <br> 
