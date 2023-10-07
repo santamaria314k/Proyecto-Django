@@ -16,9 +16,13 @@ function eliminar(id_val) {
       .then((willDelete) => {
         if (willDelete) {
          window.location.href="eliminarvaloracion/"+id_val+"/";
-
-
         }
+
+        if (willDelete) {
+          window.location.href = '/HomeLoc/admin/listarvaloracion/';  
+        } 
+
+
       });
 
     
@@ -44,6 +48,10 @@ function eliminaremplo(id_val) {
 
 
       }
+      
+      if (willDelete) {
+        window.location.href = '/HomeLoc/employee/listarvaloracionemplo/';  
+      } 
     });
 
   

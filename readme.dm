@@ -1,5 +1,7 @@
 proyecto mecanica
 
+python -m venv venv
+
 1
 .\venv\Scripts\activate  
 

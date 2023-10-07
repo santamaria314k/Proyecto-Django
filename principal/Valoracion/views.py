@@ -53,12 +53,11 @@ def editar_valoracion(request, id_val):
 
 #===========================================================
 
+
 def eliminar_valoracion(request,id_val):
     valoraciondelete=Diagnostico.objects.get(id_val=id_val)
-    valoraciondelete.delete()
+    valoraciondelete.delete()   
     return render(request,'listar_valoracion.html')
-
-
 
 
 
