@@ -1,5 +1,6 @@
 proyecto mecanica
 
+INSTALAR entorno virtual
 python -m venv venv
 
 1

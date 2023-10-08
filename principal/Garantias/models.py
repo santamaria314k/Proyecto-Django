@@ -1,6 +1,7 @@
 from django.db import models
-
+from Vehiculo.models import Serviciosxvehiculos
 # Create your models here.
+
 
 
 class TiposGarantia(models.Model):

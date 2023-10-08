@@ -23,6 +23,8 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('HomeLoc/',include('Login.urls')),
     path('', include('Valoracion.urls')),
+    path('', include('Garantias.urls')),
+
 
 
 ]
