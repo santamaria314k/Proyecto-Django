@@ -28,7 +28,7 @@
     </header>
     <a href="{% url 'Valoracion:registrarvaloracion' %}"> <button  type="button" class="btn btn-outline-primary">Registrar valoracion</button>    </a>
 
-    <a href="/HomeLoc/admin"><button class="menuad">Menu</button></a>
+    <a href="/admin"><button class="menuad">Menu</button></a>
 
 
 
@@ -48,8 +48,8 @@
         <tbody>
             {% for listadoDiagnostico in listadoDiagnosticos %}
             <tr>
-                <td class="textolargo"> {{ listadoDiagnostico.id_val }}  <p> __</p>  {{ listadoDiagnostico.diagnostico }}</td>
-                <td><a href="{% url 'Valoracion:editarvaloracion' listadoDiagnostico.id_val %}">ACTUALIZAR</a>-<a href="#" onclick="eliminar({{listadoDiagnostico.id_val }})"> ELIMINAR</a> <br><br></td>
+                <td class="textolargo"> {{ listadoDiagnostico.id_val }}  <p> -</p>  {{ listadoDiagnostico.diagnostico }}</td>
+                <td><a href="{% url 'Valoracion:editarvaloracion' listadoDiagnostico.id_val %}">ACTUALIZAR</a>-<a href="#"  onclick="eliminar({{listadoDiagnostico.id_val }})"> ELIMINAR</a> <br><br></td>
                 
             </tr>
             {% endfor %}

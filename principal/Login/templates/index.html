@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecanica Automotriz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/INDEX.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(127, 178, 255); height: 70px;">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1" style="font-size: 30px;">¡Bienvenido al taller automotriz Nelson Ortiz!</span>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">        
+          
+          
+            <a href="{% url 'login' %}"> <button type="submit" class="btn btn-outline-primary">Inicia Sesion</button> </a>
+
+
+        </li>
+          </ul>
+          </div>   
+        </div>
+    </nav>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">¿Quienes somos?</h5>
+              <p class="card-text">Somos un taller de mecanica automotriz con varios años de experiencia en el negocio</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas informacion
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">INformacion acerca de nostros</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      **insertar informacion sobre el taller**
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Servicios que ofrecemos</h5>
+              <p class="card-text">Ofrecemos servicios tales como, valoracion del vehiculo, mantenimiento, reparacion, etc</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas servicios qe ofrece el taller
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Te podemos ofrecer</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Informacion de contacto</h5>
+              <p class="card-text">Te puedes comuniucar con nosotros por los siguientes medios</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Ver canales de comunicacion
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Comunicate</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <ul>
+                        <li>WhastApp: 3241684354</li>
+                        <li>Direccion: **Aqui va la dirccion del taller**</li>
+                        <li>Correo Electronico: ejemplo@gmail.com</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="titulo" >Nuestro taller se carecteriza Por:  </h1>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          
+
+            <img src="{% static 'img/pexels-mike-bird-190537.jpg' %}"  class="d-block w-100" alt="..." height="550px">
+
+
+
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Calidad</h5>
+            <p>Tratamos de usar los mejores repuestos y brindar la mejor mano de obra a nuestros clientes</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/pexels-pixabay-162553.jpg' %}" class="d-block w-100" alt="..." height="550px">
+
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Eficencia</h5>
+            <p>Somos eficientes c0on lo que requieren los vehiculos que llegan anuestras manos</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+
+            <img src="{% static 'img/pexels-cottonbro-studio-4480505.jpg' %}" class="d-block w-100" alt="..." height="550px">
+
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Experiencia de usuario</h5>
+            <p>Hacemos el mejor trabajo para que nuestros clientes se sientan en un gran ambiente y quieran volver</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</body>
+</html>

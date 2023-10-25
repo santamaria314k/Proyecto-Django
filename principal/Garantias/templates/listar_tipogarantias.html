@@ -28,7 +28,7 @@
     </header>
     <a href="{% url 'Garantias:registrotipogarantia' %}"> <button  type="button" class="btn btn-outline-primary">Registrar Tipo Garantia</button>    </a>
 
-    <a href="/HomeLoc/admin"><button class="menuad">Menu</button></a>
+    <a href="/admin"><button class="menuad">Menu</button></a>
 
 
 
@@ -49,7 +49,7 @@
             {% for listadotipgarantia in listadoTipoGarantia %}
             <tr>
                 <td class="textolargo"> {{ listadotipgarantia.id_tiga }}  <p> __</p>  {{ listadotipgarantia.nombre }}</td>
-                <td><a href="">ACTUALIZAR</a>-<a href="#" onclick="eliminar()"> ELIMINAR</a> <br><br></td>
+                <td><a href="">ACTUALIZAR</a>-<a  onclick=""> ELIMINAR</a> <br><br></td>
                 
             </tr>
             {% endfor %}

@@ -7,6 +7,12 @@ from django.contrib.auth import logout
 
 #--------------------------------------------
 
+#>>>>>>>>>>>>>>>>>>>>>>--MOSTRAR EL INDEX--<<<<<<<<<<<<<<<<<<<<<<
+
+
+def index(request):
+    return render (request,'index.html')
+
 
 #>>>>>>>>>>>>>>>>>>>>>>--PROTECCION-RUTAS--<<<<<<<<<<<<<<<<<<<<<<
 

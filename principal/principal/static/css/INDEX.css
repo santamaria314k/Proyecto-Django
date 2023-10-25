@@ -1,0 +1,22 @@
+h1{
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+
+
+
+}
+.row{
+    margin-top: 20px;
+}
+
+.titulo{
+
+    background: black;
+    color:azure;
+margin-bottom: 0px;
+
+}

@@ -29,3 +29,31 @@ def ListarTiposGarantia(request):
     listadoTipoGarantia=TiposGarantia.objects.all()
     return render ( request,'listar_tipogarantias.html',{'listadoTipoGarantia':listadoTipoGarantia})
 
+
+
+
+
+
+
+
+#=======================================================
+#=======================================================
+#=======================================================
+#=================_GARANTIAS============================
+
+def Registro_Garantia(request):
+    RegiGarantia=GarantiasForm()
+    return render(request,'registrar_garantias.html',{'form':RegiGarantia})
+
+#---------------------------------------------------------------------
+
+def Guardar_Garantia(request):
+    if request.method == 'POST':
+        RegiGarantia=GarantiasForm(request.POST)
+        if RegiGarantia.is_valid():
+            # Guardar el diagnóstico en la base de datos
+            fecha_i = RegiGarantia.cleaned_data['fechaInicio']
+            fecha_f = RegiGarantia.cleaned_data['fechaFin']
+            reggarantia = GarantiasForm(fechaInicio =fecha_i,fechaFin =fecha_f)
+            reggarantia.save()
+    return render(request,'registro_tipogarantias.html',{'form':RegiGarantia,"mensaje":'tipo de garantia -registrada'},)

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'Login',
     'Valoracion', 
     'Garantias',
-    'Vehiculo'
+    'Vehiculo',
 
 ]
 
